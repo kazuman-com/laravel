@@ -1,0 +1,23 @@
+
+mysql:
+  image: mysql:5.7.12
+#  volumes:
+#    - /opt/mysql:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_DATABASE=testdb
+    - MYSQL_USER=test
+    - MYSQL_PASSWORD=password
+
+php:
+  build: ./php
+  volumes:
+    - ../src/php:/var/www/laravel
+  links:
+    - mysql
+
+nginx:
+  image: nginx:1.9.15
+  links:
+    - php
+
