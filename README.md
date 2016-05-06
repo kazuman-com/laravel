@@ -11,6 +11,7 @@
 6. ターミナルで「php」と入力
 7. cd /var/www/laravel
 8. cp -p .env.example .env
+   - DBの接続情報などを修正（後で修正でもOK）
 9. composer install
 10. chmod -R www-data:www-data /var/www/laravel/storage
 11. chmod -R www-data:www-data /var/www/laravel/bootstrap/cache
