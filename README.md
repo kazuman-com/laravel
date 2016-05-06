@@ -20,6 +20,16 @@
 11. chmod -R www-data:www-data /var/www/laravel/storage
 12. chmod -R www-data:www-data /var/www/laravel/bootstrap/cache
 
+## 各種設定
+
+### nginx
+
+* docker/nginx/laravel.confを修正
+
+### mysql
+
+* docker/mysql/laravel.cnfを修正
+
 ## トラブルシューティング
 
 * The cipher and / or key length are invalid
