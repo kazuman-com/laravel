@@ -18,6 +18,8 @@ php:
 
 nginx:
   image: nginx:1.9.15
+  ports:
+    - 80:80
   links:
     - php
 
