@@ -8,13 +8,17 @@
 3. vagrantとVirtualBoxのインストール
 4. git clone https://github.com/kazuman-com/laravel.git
 5. vagrant up
-6. ターミナルで「php」と入力
-7. cd /var/www/laravel
-8. cp -p .env.example .env
+6. コンテナ起動
+   - cd /home/vagrant/sync
+   - dc up -d
+7. phpコンテナに入る
+   - ターミナル上で「php」と入力
+8. cd /var/www/laravel
+9. cp -p .env.example .env
    - DBの接続情報などを修正（後で修正でもOK）
-9. composer install
-10. chmod -R www-data:www-data /var/www/laravel/storage
-11. chmod -R www-data:www-data /var/www/laravel/bootstrap/cache
+10. composer install
+11. chmod -R www-data:www-data /var/www/laravel/storage
+12. chmod -R www-data:www-data /var/www/laravel/bootstrap/cache
 
 ## トラブルシューティング
 
