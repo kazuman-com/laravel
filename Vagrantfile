@@ -80,11 +80,15 @@ Vagrant.configure(2) do |config|
     curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
 
+    # setup other tools
+    sudo yum install -y net-tools
+
     # setup bash
     echo "alias dc='docker-compose'" >> /home/vagrant/.bashrc
     echo "alias mysql='docker exec -it docker_mysql_1 bash'" >> /home/vagrant/.bashrc
     echo "alias nginx='docker exec -it docker_nginx_1 bash'" >> /home/vagrant/.bashrc
     echo "alias php='docker exec -it docker_php_1 bash'" >> /home/vagrant/.bashrc
 
+    ifconfig
   SHELL
 end
